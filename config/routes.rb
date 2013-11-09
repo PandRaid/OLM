@@ -1,10 +1,17 @@
 OLM::Application.routes.draw do
+<<<<<<< HEAD
   get "welcome/index"
+=======
+>>>>>>> 6216326f24ffd58048aad696d60a33c7773ca4f2
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+<<<<<<< HEAD
   root 'welcome#index'
+=======
+  # root 'welcome#index'
+>>>>>>> 6216326f24ffd58048aad696d60a33c7773ca4f2
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
