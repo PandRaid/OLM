@@ -23,9 +23,23 @@
       <div class="nav-collapse">
         <ul class="nav">
           <li><%= link_to "About Us", "/static_pages/about"%></li>
-          <li><%= link_to "Sign Up/In" %></li>
           <li><%= link_to "Contact Us", "/static_pages/contact" %></li>
-          <li><%= link_to "Partner Information" %></li>
+          <li><%= link_to "Frequently Asked" %></li>
+          <li>
+            <div class="btn-group">
+            <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+              Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>  
+          </li>
+
         </ul>
       </div>
       </form>
