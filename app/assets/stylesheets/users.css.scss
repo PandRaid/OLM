@@ -1,0 +1,20 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.wellBlues {
+	background-color: #bce8f1;
+}
+
+.field label {
+    float:left;
+    text-align:right;
+    margin-right:-40%;
+    font-weight: bold;
+}
+
+
+select.date-select {
+    width:70px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}

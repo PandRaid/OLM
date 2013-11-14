@@ -14,11 +14,22 @@ OLM::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
+  get 'users/:new' => 'users#new'
+  get 'login/:new' => 'login#new'
+  post 'login/:new' => 'login#create'
+  delete 'login/:new' => 'login#destroy'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
+  Rails.application.routes.draw do
+  resources :users # or resource :user for singular resources
+  resources :login
+  end
+
 
   # Example resource route with options:
   #   resources :products do

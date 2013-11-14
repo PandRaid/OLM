@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="span2"></div>
+    <div class="span8">
+      <div class="well well-small wellBlue">
+        <h3 class="text-center">Login to OLM</h3>
+      </div>
+      <div class="well well-small text-center wellBlue">  
+	<%= form_tag "/login/new" do %>
+
+	<div id="user_nav">
+	  <% if current_user %>
+	  	<div class="alert alert-info">
+		  <h2>Thanks for logging in <strong><%= current_user.username%></strong>!!</h2>
+		  <h4> Visit your home page or logout 
+		  	<li><%= link_to "My Account", "/#"%></li>
+		  	<li><%= link_to "logout", {:controller=> "login", :action=> "destroy"}, :method => :delete%></li>
+		  </h4>
+		</div>
+	  <% else %>
+		  <% if @badForm==true %>
+	      	<ul>
+	          <div class="alert alert-error">
+	            <button type="button" class="close" data-dismiss="alert">&times;</button>
+	            <strong>Warning!</strong> 
+	            <ul>
+	                <p>Bad Username/Password Combination</p>
+	      	    </ul>
+	      	  </div>
+	      <%end%>
+		  <div class="field">
+		    <%= label_tag :email %>
+		    <%= text_field_tag :email, params[:email] %>
+		  </div>
+		  <div class="field">
+		    <%= label_tag :password %>
+		    <%= password_field_tag :password %>
+		  </div>
+		  <div class="actions"><%= submit_tag "Log in" %></div>
+		<% end %>
+
+	  <% end %>
+	</div>
+	<div class="span2"></div>
+	</div>
+	</div>
+	</div>
+</div>
