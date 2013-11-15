@@ -32,7 +32,13 @@
             </button>
             <ul class="dropdown-menu" role="menu">
               <% if current_user %>
-                <li><a href="#">My Account</a></li>
+                <li>
+                  <%if current_user.username == "administrator"%>
+                    <a href="#">Admin Page</a>
+                  <%else%>
+                    <a href="#">My Account</a>
+                  <%end%>
+                </li>
                 <li><%= link_to "Logout", {:controller=> "login", :action=> "destroy"}, :method => :delete%></li>
                 <li class="divider"></li>
                 <li><a href="#">Partners</a></li>

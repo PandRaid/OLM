@@ -10,5 +10,5 @@ class User < ActiveRecord::Base
 	validates_length_of :username, :within => 6..20, :too_long => "pick a shorter name", :too_short => "pick a longer name"
     validates_length_of :zip, :minimum => 5, :too_short => "please enter at least 5 characters"
     validates_length_of :password, :minimum => 8 ,:maximum => 32, :within => 8..32,:too_short => 'way too short', :too_long => 'way to long'
-    validates_uniqueness_of :username, :email
+    validates_uniqueness_of :username, :email, :case_sensitive => false
 end

@@ -34,6 +34,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'simple_form'
 
+gem "route_downcaser", "~> 0.2.1"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
