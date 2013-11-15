@@ -34,12 +34,12 @@
               <% if current_user %>
                 <li>
                   <%if current_user.username == "administrator"%>
-                    <a href="#">Admin Page</a>
+                    <%= link_to "Admin Account", admin_url%>
                   <%else%>
                     <a href="#">My Account</a>
                   <%end%>
                 </li>
-                <li><%= link_to "Logout", {:controller=> "login", :action=> "destroy"}, :method => :delete%></li>
+                <li><%= link_to "Logout", {:controller=> "/login", :action=> "destroy"}, :method => :delete%></li>
                 <li class="divider"></li>
                 <li><a href="#">Partners</a></li>
               <%else%>

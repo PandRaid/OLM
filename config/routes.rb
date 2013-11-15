@@ -1,4 +1,6 @@
 OLM::Application.routes.draw do
+  get "books/index"
+  get "dashboard/index"
   get "static_pages/contact"
   get "static_pages/about"
   get "static_pages/faq"
@@ -31,6 +33,9 @@ OLM::Application.routes.draw do
   resources :login
   end
 
+  namespace :admin do 
+    get 'dashboard/index', to: 'dashboard#show', as: '/' 
+  end
 
   # Example resource route with options:
   #   resources :products do
