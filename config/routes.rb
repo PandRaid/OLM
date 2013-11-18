@@ -22,6 +22,10 @@ OLM::Application.routes.draw do
   delete 'login/:new' => 'login#destroy'
   delete '/#' => 'login#destroy'
 
+  get 'upload/pdfview' => 'upload#pdfview'
+  get 'upload/fileform' => 'upload#fileform'
+  post 'upload/fileupload' => 'upload#fileupload'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
