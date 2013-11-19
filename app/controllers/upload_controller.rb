@@ -1,6 +1,6 @@
 class UploadController < ApplicationController
 	def pdfview
-		@message = "View the PDF"
+		@book = Book.find(params[:id])
 	end
 
 	def fileupload
@@ -10,7 +10,7 @@ class UploadController < ApplicationController
 			file.write(uploaded_io.read)
 		end
 		File.open(Rails.root.join('public', 'uploads', uploaded_io2.original_filename), 'wb+') do |file|
-			file.write(uploaded_io.read)
+			file.write(uploaded_io2.read)
 		end
 
 		book_params = {
@@ -23,8 +23,7 @@ class UploadController < ApplicationController
 		book = Book.new(book_params)
 
 		if book.save
-			flash[:notice] = "Sucessfully uploaded book."
-			redirect_to "/upload/fileform"
+			redirect_to "/upload/pdfview?id=" + String(book.id)
 		else
 			render "fileform"
 		end
