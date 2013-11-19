@@ -1,0 +1,15 @@
+<h1>Search Query: <%= params[:q] %></h1>
+
+<h2>Results by Title</h2>
+<ol>
+<% @title_books.each do |b| %>
+	<li><a href="/upload/pdfview?id=<%= b.id %>"><%= b.title %></a></li>
+<% end %>
+</ol>
+
+<h2>Results by Author</h2>
+<ol>
+<% @author_books.each do |b| %>
+	<li><a href="/upload/pdfview?id=<%= b.id %>"><%= b.title %></a></li>
+<% end %>
+</ol>

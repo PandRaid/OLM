@@ -3,6 +3,11 @@ class UploadController < ApplicationController
 		@book = Book.find(params[:id])
 	end
 
+	def search
+		@title_books = Book.search_title(params[:q])
+		@author_books = Book.search_author(params[:q])
+	end
+
 	def fileupload
 		uploaded_io = params[:book]
 		uploaded_io2 = params[:cover]

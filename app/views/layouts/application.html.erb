@@ -22,9 +22,9 @@
       <a class="brand" href="/#">Online Library Management</a>
       <div class="nav-collapse">
         <ul class="nav">
-          <li><%= link_to "About Us", "/static_pages/about"%></li>
-          <li><%= link_to "Contact Us", "/static_pages/contact" %></li>
-          <li><%= link_to "Frequent Questions", "/static_pages/faq" %></li>
+          <li><%= link_to "About", "/static_pages/about"%></li>
+          <li><%= link_to "Contact", "/static_pages/contact" %></li>
+          <li><%= link_to "FAQ", "/static_pages/faq" %></li>
           <li>
             <div class="btn-group span2">
             <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
@@ -49,14 +49,17 @@
                 <li><a href="#">Partners</a></li>
               <%end%>
             </ul>
-          </div>  
+          </div>
           </li>
 
         </ul>
       </div>
       </form>
-      <form class="navbar-search pull-right">
-  		<input type="text" class="search-query" placeholder="Search">
+      <form class="navbar-search pull-right" action="/upload/search">
+      <div class="input-append">
+  		<input type="text" class="text" placeholder="Search" name="q">
+      <button type="submit" class="btn"><i class="icon-search"></i></button>
+      </div>
 	  </form>
     </div>
   </div>

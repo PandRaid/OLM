@@ -25,6 +25,7 @@ OLM::Application.routes.draw do
 
   get 'upload/pdfview' => 'upload#pdfview'
   get 'upload/fileform' => 'upload#fileform'
+  get 'upload/search' => 'upload#search'
   post 'upload/fileupload' => 'upload#fileupload'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
@@ -40,7 +41,7 @@ OLM::Application.routes.draw do
 
   namespace :admin do
     get "manage_users/list", to: 'manage_users#list', as: '/manage_users/list'
-    get 'dashboard/index', to: 'dashboard#show', as: '/' 
+    get 'dashboard/index', to: 'dashboard#show', as: '/'
   end
 
   # Example resource route with options:
@@ -68,7 +69,7 @@ OLM::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
