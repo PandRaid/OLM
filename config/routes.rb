@@ -1,4 +1,5 @@
 OLM::Application.routes.draw do
+  get "users/user"
   get "books/index"
   get "dashboard/index"
   get "static_pages/contact"
@@ -37,7 +38,8 @@ OLM::Application.routes.draw do
   resources :login
   end
 
-  namespace :admin do 
+  namespace :admin do
+    get "manage_users/list", to: 'manage_users#list', as: '/manage_users/list'
     get 'dashboard/index', to: 'dashboard#show', as: '/' 
   end
 
