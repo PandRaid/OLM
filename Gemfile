@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
+
+gem 'pg', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -36,7 +38,7 @@ gem 'simple_form'
 
 gem "route_downcaser", "~> 0.2.1"
 
-gem "will_paginate", "~> 3.0.4" 
+gem "will_paginate", "~> 3.0.4"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -54,3 +56,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'rails_12factor', group: :production
