@@ -7,11 +7,13 @@
       </div>
       <div class="well well-small text-center wellBlue">  
 	<div id="user_nav">
-		  <h4> Manage Users or Books Here!! 
-		  	<li><%= link_to "Manage Users", "/admin/manage_users/list"%></li>
-		  	<li><%= link_to "Manage Books", "/#"%></li>
-		  </h4>
-		</div>
+		 <h4> Manage Users or Books Here!! </h4>
+		  <p></p>
+		  <table align="center" cellpadding="20px">
+		  	<tr>
+		  		<td><%= button_to "Manage Users", "/admin/manage_users/list"%></td><td><%= button_to "Manage Books", "/#"%></td>
+		  	</tr>
+		  </table>
 	</div>
 	<div class="span2"></div>
 	</div>

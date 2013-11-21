@@ -42,6 +42,7 @@ OLM::Application.routes.draw do
   namespace :admin do
     get "manage_users/list", to: 'manage_users#list', as: '/manage_users/list'
     get 'dashboard/index', to: 'dashboard#show', as: '/'
+    post 'manage_users/list'
   end
 
   # Example resource route with options:
