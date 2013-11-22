@@ -36,7 +36,7 @@
                   <%if current_user.username == "administrator"%>
                     <%= link_to "Admin Account", admin_url%>
                   <%else%>
-                    <a href="#">My Account</a>
+                    <a href="/users/account">My Account</a>
                   <%end%>
                 </li>
                 <li><%= link_to "Logout", {:controller=> "/login", :action=> "destroy"}, :method => :delete%></li>

@@ -17,6 +17,8 @@ OLM::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
+  get 'users/account' => 'users#account'
+  post 'users/editaccount' => 'users#editaccount'
   get 'users/:new' => 'users#new'
   get 'login/:new' => 'login#new'
   post 'login/:new' => 'login#create'
