@@ -31,11 +31,11 @@
 		    <%= text_field_tag :author, params[:author] %>
 		  </div>
 		  <div class="field">
-		    <%= label_tag :cover %>
+		    <%= label_tag "Cover (image file)" %>
 		  	<%= file_field_tag 'cover' %>
 		  </div>
 		  <div class="field">
-		    <%= label_tag "book" %>
+		    <%= label_tag "Book (PDF file)" %>
 		  	<%= file_field_tag 'book' %>
 		  </div>
 		  <div class="actions"><%= submit_tag "Upload File" %></div>
