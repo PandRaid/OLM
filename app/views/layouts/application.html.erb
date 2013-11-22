@@ -40,8 +40,6 @@
                   <%end%>
                 </li>
                 <li><%= link_to "Logout", {:controller=> "/login", :action=> "destroy"}, :method => :delete%></li>
-                <li class="divider"></li>
-                <li><a href="#">Partners</a></li>
               <%else%>
                 <li><a href="/login/new">Sign In</a></li>
                 <li><a href="/users/new">Register</a></li>
