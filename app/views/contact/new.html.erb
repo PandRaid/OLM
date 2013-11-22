@@ -1,0 +1,79 @@
+<div class = "container">
+	<div class = "row">
+		<div class = "span5">
+			<div class="well well-small">
+				<h3>  Contact Us</h3>
+				<ul class="nav nav-list"></ul>
+				 </div>
+
+	
+				<div class="well well-small">
+				 <address>
+				  <strong>OLM, Inc.</strong><br>
+				  777 Random Ave, Suite 666<br>
+				  Tempe, Az, 85284<br>
+				  <abbr title="Support">P:</abbr> (123) 456-7890
+				</address>
+				  <table class="table">
+					  <thead><th>Founder</th> <th>Email</th> <th>Number</th></thead>
+					   <tbody>
+					    <tr>
+					      <td>David Dunning</td>
+					      <td>dcdunnin@asu.edu</td>
+					      <td>(480)208-3077</td>
+					    </tr>
+					    <tr>
+					      <td>Shantanu Bala</td>
+					      <td>shantanu@asu.edu</td>
+					      <td>(480)242-0876</td>
+					    </tr>
+					    <tr>
+					      <td>Antonio Franchini</td>
+					      <td>afranchi@asu.edu</td>
+					      <td>(480)202-8084</td>
+					    </tr>
+					  </tbody>
+				  </table>
+			</div>
+		</div>
+		<div class = "span7">
+			<div class="well well-small">
+				<h3>Any Questions?</h3>
+				<ul class="nav nav-list"></ul>
+				 </div>
+			<div class="well well-small">
+				 <%= form_for @message, :url => contact_path do |form| %>
+				  <fieldset>
+				  <label class="control-label" for="inputIcon">Name</label>
+					  <div class="controls">
+					    <div class="input-prepend">
+					      <span class="add-on"><i class="icon-user" ></i></span>
+					      <input class="span3" id="inputIcon" type="text" placeholder="John Smith" name="message[name]">
+					    </div>
+					  </div>
+				    <label class="control-label" for="inputIcon">Email address</label>
+					  <div class="controls">
+					    <div class="input-prepend">
+					      <span class="add-on"><i class="icon-envelope" ></i></span>
+					      <input class="span3" id="inputIcon" type="text" placeholder="example123@email.com" name="message[email]">
+					    </div>
+					  </div>
+				    <label>Nature of Email</label>
+				    <select class ="span4" select id="subject" name="message[subject]">
+					  <option value="General Question">General Inquiry</option>
+					  <option value="Bug Report">Report A Bug</option>
+					  <option value="Account Issue">Report an Account Issue</option>
+					  <option value="Joining OLM">Become part of OLM</option>
+					  <option value="Help">Help</option>
+					</select>
+					<label>Question</label>
+					<textarea rows="6" class="span6" name="message[body]"></textarea>
+				  </fieldset>
+				  <fieldset class="actions">
+				    <%= form.submit "Send" %>
+				  </fieldset>
+				<%end%>
+			</div>
+		</div>
+	</div>
+</div>

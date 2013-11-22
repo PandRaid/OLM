@@ -19,5 +19,19 @@ module OLM
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.action_mailer.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :domain               => "polar-wildwood-2829.herokuapp.com/",
+  :user_name            => "admin@polar-wildwood-2829.herokuapp.com/",
+  :password             => "68921dcd!!",
+  :authentication       => :plain,
+  :enable_starttls_auto => true
+}
+
+config.action_mailer.default_url_options = {
+  :host => "polar-wildwood-2829.herokuapp.com/"
+}
   end
 end
+

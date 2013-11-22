@@ -28,6 +28,9 @@ OLM::Application.routes.draw do
   get 'upload/search' => 'upload#search'
   post 'upload/fileupload' => 'upload#fileupload'
 
+  get '/contact' => 'contact#new'
+  post '/contact' => 'contact#create'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
