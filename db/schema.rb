@@ -14,10 +14,6 @@
 ActiveRecord::Schema.define(version: 20131122173526) do
 
   create_table "books", force: true do |t|
-    t.string   "title"
-    t.string   "author"
-    t.string   "book"
-    t.string   "cover"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

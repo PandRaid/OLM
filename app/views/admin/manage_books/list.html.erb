@@ -21,7 +21,7 @@
 			  		<td><%= book.title %></td>
 			  		<td><%= book.author %></td>
 			  		<td>
-			  		<% if current_user.username == "administrator" %>
+			  		<% if current_user != nil && current_user.admin? %>
     				   <form action="/admin/manage_books/delete" class="button_to" method="post"><div><input name="id" value="<%= book.id %>" type="hidden"><input data-confirm="You sure?" value="delete" type="submit"><input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden"></div></form>
 					  <% end %>
 					</td>
