@@ -36,17 +36,13 @@
                   <%if current_user != nil && current_user.admin?%>
                     <%= link_to "Admin Account", admin_url%>
                   <%else%>
-                    <a href="#">My Account</a>
+                    <a href="/users/account">My Account</a>
                   <%end%>
                 </li>
                 <li><%= link_to "Logout", {:controller=> "/login", :action=> "destroy"}, :method => :delete%></li>
-                <li class="divider"></li>
-                <li><a href="#">Partners</a></li>
               <%else%>
                 <li><a href="/login/new">Sign In</a></li>
                 <li><a href="/users/new">Register</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Partners</a></li>
               <%end%>
             </ul>
           </div>
@@ -65,6 +61,9 @@
   </div>
 </div>
 <div class="container">
+  <% if flash[:notice] %>
+  <div class="alert"><%= flash[:notice] %></div>
+  <% end %>
 	<div class="row">
 		<div class="span9"><%= yield %></div>
 		<div class="span3"></div>

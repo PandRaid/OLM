@@ -17,6 +17,8 @@ OLM::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
+  get 'users/account' => 'users#account'
+  post 'users/editaccount' => 'users#editaccount'
   get 'users/:new' => 'users#new'
   get 'login/:new' => 'login#new'
   post 'login/:new' => 'login#create'
@@ -44,10 +46,13 @@ OLM::Application.routes.draw do
 
   namespace :admin do
     get "manage_users/list", to: 'manage_users#list', as: '/manage_users/list'
+    get "manage_books/list", to: 'manage_books#list', as: '/manage_books/list'
     get 'dashboard/index', to: 'dashboard#show', as: '/'
     post 'manage_users/list'
     get 'add/new'  => 'add#new'
     post 'add/new' => 'add#create'
+    post 'manage_books/list'
+    post 'manage_books/delete'
   end
 
   # Example resource route with options:
