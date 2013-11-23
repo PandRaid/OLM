@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131122065053) do
+ActiveRecord::Schema.define(version: 20131122173526) do
 
   create_table "books", force: true do |t|
     t.datetime "created_at"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20131122065053) do
     t.string   "username"
     t.date     "birth",           limit: 255
     t.string   "country"
+    t.boolean  "admin",                       default: false
   end
 
 end

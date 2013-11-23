@@ -12,6 +12,8 @@
 		  <table align="center" cellpadding="20px">
 		  	<tr>
 		  		<td><%= button_to "Manage Users", "/admin/manage_users/list"%></td><td><%= button_to "Manage Books", "/#"%></td>
+		  		<td><%= button_to "Add Admin", {:controller=> "/admin/add", :action=> "new"}, :method => :get%></td>
+		  		
 		  	</tr>
 		  </table>
 	</div>

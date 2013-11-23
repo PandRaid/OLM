@@ -1,9 +1,9 @@
 class NotificationsMailer < ActionMailer::Base
-  default :from => "noreply@polar-wildwood-2829.herokuapp.com"
-  default :to => "admin@polar-wildwood-2829.herokuapp.com"
+  default :from => "ilovebouldering@gmail.com"
+  default :to => "olmadm1nistratorz@gmail.com"
 
   def new_message(message)
     @message = message
-    mail(:subject => "[YourWebsite.tld] #{message.subject}")
+    mail(:subject => "#{message.subject}")
   end
 end

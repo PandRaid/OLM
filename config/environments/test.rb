@@ -33,4 +33,12 @@ OLM::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+   config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  user_name:            'olmsmtpmailer@gmail.com',
+  password:             'MooMooMagoo',
+  authentication:       'plain',
+  enable_starttls_auto: true  }
 end

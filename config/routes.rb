@@ -46,6 +46,8 @@ OLM::Application.routes.draw do
     get "manage_users/list", to: 'manage_users#list', as: '/manage_users/list'
     get 'dashboard/index', to: 'dashboard#show', as: '/'
     post 'manage_users/list'
+    get 'add/new'  => 'add#new'
+    post 'add/new' => 'add#create'
   end
 
   # Example resource route with options:

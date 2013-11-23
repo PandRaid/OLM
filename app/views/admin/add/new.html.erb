@@ -1,0 +1,167 @@
+<div class="container">
+  <div class="row">
+    <div class="span2"></div>
+    <div class="span8">
+      <div class="well well-small wellBlue">
+        <h3 class="text-center">Register for OLM</h3>
+      </div>
+      <div class="well well-small text-center wellBlue">
+      <%= form_for @admin, :url => admin_add_new_path do |f| %>
+        <% if @admin.errors.any? %>
+          <div class="error_messages">
+            <h3>Form Has Errors</h3>
+            <ul>
+              <div class="alert alert-error">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Warning!</strong> 
+                <ul>
+                  <% for message in @admin.errors.full_messages %>
+                    <p><%= message %></p>
+                  <% end %>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.label :"First Name" %><%= f.text_field :first_name %>
+        </div>
+        <div class="field">
+          <%= f.label :"Last Name"%>
+          <%= f.text_field :last_name, :class=>"form-horizontal" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :"Country"%>
+          <select id="country" name="admin[country]">
+          <option value="Afghanistan">Afghanistan</option>
+          <option value="Albania">Albania</option>
+          <option value="Algeria">Algeria</option>
+          <option value="Andorra">Andorra</option>
+          <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+          <option value="Bahamas">Bahamas</option>
+          <option value="Bahrain">Bahrain</option>
+          <option value="Bangladesh">Bangladesh</option>
+          <option value="Barbados">Barbados</option>
+          <option value="Belarus">Belarus</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Belize">Belize</option>
+          <option value="Botswana">Botswana</option>
+          <option value="Burkina Faso">Burkina Faso</option>
+          <option value="Burundi">Burundi</option>
+          <option value="Cambodia">Cambodia</option>
+          <option value="Cameroon">Cameroon</option>
+          <option value="Canada">Canada</option>n>
+          <option value="Chad">Chad</option>
+          <option value="Chile">Chile</option>
+          <option value="China">China</option>
+          <option value="Cyprus">Cyprus</option>
+          <option value="Czech Republic">Czech Republic</option>
+          <option value="Denmark">Denmark</option>
+          <option value="Djibouti">Djibouti</option>
+          <option value="Dominica">Dominica</option>
+          <option value="Dominican Republic">Dominican Republic</option>
+          <option value="Ecuador">Ecuador</option>
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="Japan">Japan</option>
+          <option value="Malta">Malta</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Russian Federation">Russian Federation</option>
+          <option value="Solomon Islands">Solomon Islands</option>
+          <option value="Somalia">Somalia</option>
+          <option value="South Africa">South Africa</option>
+          <option value="Timor-leste">Timor-leste</option>
+          <option value="Togo">Togo</option>
+          <option value="Tokelau">Tokelau</option>
+          <option value="Tonga">Tonga</option>
+          <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+          <option value="Tunisia">Tunisia</option>
+          <option value="Turkey">Turkey</option>
+          <option value="Turkmenistan">Turkmenistan</option>
+          <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+          <option value="Tuvalu">Tuvalu</option>
+          <option value="Uganda">Uganda</option>
+          <option value="Ukraine">Ukraine</option>
+          <option value="United Arab Emirates">United Arab Emirates</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="United States">United States</option>
+          <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+          <option value="Uruguay">Uruguay</option>
+          <option value="Uzbekistan">Uzbekistan</option>
+          <option value="Vanuatu">Vanuatu</option>
+          <option value="Venezuela">Venezuela</option>
+          <option value="Viet Nam">Viet Nam</option>
+          <option value="Virgin Islands, British">Virgin Islands, British</option>
+          <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+          <option value="Wallis and Futuna">Wallis and Futuna</option>
+          <option value="Western Sahara">Western Sahara</option>
+          <option value="Yemen">Yemen</option>
+          <option value="Zambia">Zambia</option>
+          <option value="Zimbabwe">Zimbabwe</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <%= f.label :"School"%>
+          <select id="school" name="admin[school]">
+          <option value="ASU">ASU</option>
+          <option value="Berkley">Berkley</option>
+          <option value="Cal Tech">Cal Tech</option>
+          <option value="Dartmouth">Dartmouth</option>
+          <option value="Ellington">Ellington</option>
+          <option value="FSU">FSU</option>
+          <option value="Graham">Graham</option>
+          <option value="Harvey Mudd">Harvey Mudd</option>
+          <option value="ISU">ISU</option>
+          <option value="John Hopkins">John Hopkins</option>
+          <option value="KSU">KSU</option>
+          <option value="LSU">LSU</option>
+          <option value="MIT">MIT</option>
+          <option value="NSU">NSU</option>
+          <option value="OSU">OSU</option>
+          <option value="Princeton">Princeton</option>
+          <option value="Quail Canyon">Quail Canyon</option>
+          <option value="Redmond">Redmond</option>
+          <option value="SLU">SLU</option>
+          <option value="RSU">RSU</option>
+          <option value="TSU">TSU</option>
+          <option value="USC">USC</option>
+          <option value="Valvista">Valvista</option>
+          <option value="Wash U">Wash U</option>
+          <option value="York Town">York Town</option>
+          </select>
+        </div> 
+         <div class="field date_select">
+         <%= f.label :"Date of Birth" %>
+          <%= f.date_select :birth, {:prompt => { :day => 'Day', :month => 'Month', :year => 'Year'}, :start_year=>1950}, {:class => 'date-select'}%>
+        </div>
+        <div class="field">
+         <%= f.label :"Zip Code" %>
+          <%= f.text_field :zip %>
+        </div>
+         <div class="field">
+          <%= f.label :"User Name" %>
+          <%= f.text_field :username %>
+        </div>
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+        </div>
+        <div class="field">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation %>
+        </div>
+        <br></br>
+        <div class="actions"><%= f.submit %></div>
+      <% end %>
+      </div>
+      </div>
+      <div class="span2"></div>
+    </div>
+</div>

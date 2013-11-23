@@ -33,7 +33,7 @@
             <ul class="dropdown-menu" role="menu">
               <% if current_user %>
                 <li>
-                  <%if current_user.username == "administrator"%>
+                  <%if current_user != nil && current_user.admin?%>
                     <%= link_to "Admin Account", admin_url%>
                   <%else%>
                     <a href="#">My Account</a>
