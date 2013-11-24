@@ -5,7 +5,7 @@ class AddNameToUsers < ActiveRecord::Migration
     add_column :users, :school, :string
     add_column :users, :zip, :integer
     add_column :users, :username, :string
-    add_column :users, :birth, :string
+    add_column :users, :birth, :date
     add_column :users, :country, :string
   end
 end

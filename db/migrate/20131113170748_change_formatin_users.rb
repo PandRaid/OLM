@@ -4,6 +4,6 @@ class ChangeFormatinUsers < ActiveRecord::Migration
   end
 
   def self.down
-   change_column :users, :birth, :string
+   change_column :users, :birth, :date
   end
 end
